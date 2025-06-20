@@ -1,7 +1,14 @@
 # FetchRecipes
 
 ### Summary
-Include screenshots or a video of your app here, highlighting its features. For example, you can drag and drop images or link to a demo video.
+
+https://github.com/user-attachments/assets/ba2dcb97-ef23-4a83-87b4-68cce16c67c5
+
+https://github.com/user-attachments/assets/1348869e-b8f9-4291-a453-0e0ca2160ca8
+
+![simulator_screenshot_B4988121-0FEA-482B-9E31-2AC246574D08](https://github.com/user-attachments/assets/fc0e5693-c30b-4458-a35d-bbe232e0481f)
+
+![simulator_screenshot_6ED48D76-3012-4B46-9F9B-6B8A6B867D23](https://github.com/user-attachments/assets/273bc9fc-4865-417f-95b9-849abe9c138d)
 
 ### Focus Areas
 What specific areas of the project did you prioritize? Why did you choose to focus on these areas?
