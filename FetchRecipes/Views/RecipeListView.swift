@@ -15,6 +15,7 @@ struct RecipeListView: View {
                             ProgressView("Loading Recipes…")
                                 .accessibilityLabel("Loading Recipes")
                                 .navigationTitle("Recipes")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                         } else if viewModel.recipes.isEmpty {
                             emptyStateView
                                 .navigationTitle("Recipes")
@@ -91,19 +92,14 @@ struct RecipeListView: View {
             .accessibilityLabel("Refresh Button")
         }
     }
-    
-    
 }
 
 #Preview {
     let viewModel = RecipeListViewModel()
-    // Load sample data for preview
     Task {
-        if let url = URL(string: "https://www.themealdb.com/api/json/v1/1/search.php?s=") {
-            if let (data, _) = try? await URLSession.shared.data(from: url) {
-                if let decoded = try? JSONDecoder().decode(RecipeListResponse.self, from: data) {
-                    viewModel.recipes = decoded.recipes ?? []
-                }
+        if let (data, _) = try? await URLSession.shared.data(from: RecipeAPI.recipesURL) {
+            if let decoded = try? JSONDecoder().decode(RecipeListResponse.self, from: data) {
+                viewModel.recipes = decoded.recipes ?? []
             }
         }
     }

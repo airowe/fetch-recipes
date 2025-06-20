@@ -70,7 +70,7 @@ actor ImageCache {
     }
     
     private static func filename(for url: URL) -> String {
-        // Use a filesystem-safe base64-encoded version of the full URL string
+        // Use a filesystem-safe base64-encoded version of the full URL string (no '/', '+', '=')
         if let data = url.absoluteString.data(using: .utf8) {
             var base64 = data.base64EncodedString()
             base64 = base64.replacingOccurrences(of: "/", with: "_")
